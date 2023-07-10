@@ -1,7 +1,7 @@
 ﻿<div class="header-top-w3layouts">
 	<div class="container">
 		<div class="col-md-6 logo-w3">
-			<a href="index.html"><img src="~/Tema/images/logo2.png" alt=" " /><h1>UCUZ.COM</h1></a>
+			<a asp-controller="Default" asp-action="Index"><img src="~/Tema/images/logo2.png" alt=" " /><h1>UCUZ.COM</h1></a>
 		</div>
 		<div class="col-md-6 phone-w3l">
 			<ul>
@@ -26,11 +26,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav ">
-						<li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>
-						<li><a href="about.html" class="hyper"><span>About</span></a></li>
-						<li><a href="contact.html" class="hyper"><span>Contact Us</span></a></li>
-						<li><a href="about.html" class="hyper"><span>Register</span></a></li>
-						<li><a href="about.html" class="hyper"><span>Login</span></a></li>
+						<li class=" active"><a asp-controller="Default" asp-action="Index" class="hyper "><span>Home</span></a></li>
+						<li><a asp-controller="About" asp-action="Index" class="hyper"><span>About</span></a></li>
+						<li><a asp-controller="Contact" asp-action="Index" class="hyper"><span>Contact Us</span></a></li>
+						<li><a asp-controller="Login" asp-action="SignUp" class="hyper"><span>Register</span></a></li>
+						<li><a asp-controller="Login" asp-action="SignIn" class="hyper"><span>Login</span></a></li>
 					</ul>
 				</div>
 			</nav>
