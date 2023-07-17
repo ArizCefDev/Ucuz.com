@@ -1,4 +1,6 @@
 using AutoMapper;
+using Business.Abstract;
+using Business.Concrete;
 using Business.Congig;
 using DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +21,10 @@ var mappingConfig = new MapperConfiguration(mc =>
 builder.Services.AddSingleton(mappingConfig.CreateMapper());
 
 //Services
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 
 var app = builder.Build();

@@ -1,0 +1,7 @@
+﻿@model List<DTO.DTOEntity.ContactDTO>
+<div class="map-w3ls">
+    @foreach (var item in Model)
+    {
+        <iframe src="@item.Map" allowfullscreen></iframe>
+    }
+</div>

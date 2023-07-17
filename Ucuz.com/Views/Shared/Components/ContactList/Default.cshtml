@@ -1,0 +1,19 @@
+﻿@model List<DTO.DTOEntity.ContactDTO>
+
+<div class="col-md-3 col-sm-3 contact-left">
+	@foreach (var item in Model)
+	{
+		<div class="address">
+			<h4>ADDRESS</h4>
+			<h5>@item.Address</h5>
+		</div>
+		<div class="phone">
+			<h4>PHONE</h4>
+			<h5>@item.Phone</h5>
+		</div>
+		<div class="email">
+			<h4>EMAIL</h4>
+			<h5><a href="mailto:@item.Gmail">@item.Gmail</a></h5>
+		</div>
+	}
+</div>

@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Business.Abstract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Ucuz.com.Controllers
 {
 	public class DefaultController : Controller
 	{
-		public IActionResult Index()
+		private readonly IProductService _productService;
+
+        public DefaultController(IProductService productService)
+        {
+            _productService = productService;
+        }
+
+        public IActionResult Index()
 		{
-			return View();
+			var values=_productService.GetAll();
+			return View(values);
 		}
 	}
 }

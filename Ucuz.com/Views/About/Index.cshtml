@@ -1,4 +1,4 @@
-﻿
+﻿@model List<DTO.DTOEntity.AboutDTO>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_PageLayout.cshtml";
@@ -8,55 +8,58 @@
 	<div class="container">
 		<h3>About Us</h3>
 		<div class="about-info">
-			<div class="col-md-8 about-grids">
-				<h4>Our latest collection</h4>
-				<p>Dignissimos at vero eos et accusamus et iusto odio ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecat officia. </p>
-				<div class="about-w3ls-row">
-					<script type="text/javascript">
-						$(window).load(function () {
-							$("#flexiselDemo3").flexisel({
-								visibleItems: 2,
-								animationSpeed: 1000,
-								autoPlay: false,
-								autoPlaySpeed: 3000,
-								pauseOnHover: true,
-								enableResponsiveBreakpoints: true,
-								responsiveBreakpoints: {
-									portrait: {
-										changePoint: 480,
-										visibleItems: 2
-									},
-									landscape: {
-										changePoint: 640,
-										visibleItems: 2
-									},
-									tablet: {
-										changePoint: 768,
-										visibleItems: 2
+			@foreach (var item in Model)
+			{
+				<div class="col-md-8 about-grids">
+					<h4>@item.Title</h4>
+					<p>@item.Description </p>
+					<div class="about-w3ls-row">
+						<script type="text/javascript">
+							$(window).load(function () {
+								$("#flexiselDemo3").flexisel({
+									visibleItems: 2,
+									animationSpeed: 1000,
+									autoPlay: false,
+									autoPlaySpeed: 3000,
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: {
+										portrait: {
+											changePoint: 480,
+											visibleItems: 2
+										},
+										landscape: {
+											changePoint: 640,
+											visibleItems: 2
+										},
+										tablet: {
+											changePoint: 768,
+											visibleItems: 2
+										}
 									}
-								}
-							});
+								});
 
-						});
-					</script>
-					<script type="text/javascript" src="~/Tema/js/jquery.flexisel.js"></script>
-					<ul id="flexiselDemo3">
-						<li>
-							<img src="~/Tema/images/a1.jpg" class="img-responsive" alt="" />
-						</li>
-						<li>
-							<img src="~/Tema/images/a2.jpg" class="img-responsive" alt="" />
-						</li>
-						<li>
-							<img src="~/Tema/images/a3.jpg" class="img-responsive" alt="" />
-						</li>
-						<li>
-							<img src="~/Tema/images/a4.jpg" class="img-responsive" alt="" />
-						</li>
-					</ul>
-					<div class="clearfix"> </div>
+							});
+						</script>
+						<script type="text/javascript" src="~/Tema/js/jquery.flexisel.js"></script>
+						<ul id="flexiselDemo3">
+							<li>
+								<img src="@item.Image1" class="img-responsive" alt="" />
+							</li>
+							<li>
+								<img src="@item.Image2" class="img-responsive" alt="" />
+							</li>
+							<li>
+								<img src="@item.Image3" class="img-responsive" alt="" />
+							</li>
+							<li>
+								<img src="@item.Image4" class="img-responsive" alt="" />
+							</li>
+						</ul>
+						<div class="clearfix"> </div>
+					</div>
 				</div>
-			</div>
+			}
 			<div class="col-md-4 about-grids">
 				<h4>Our Advantages</h4>
 				<div class="pince">
