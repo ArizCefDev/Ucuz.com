@@ -1,7 +1,8 @@
-﻿@model List<DTO.DTOEntity.ProductDTO>
+﻿@model IEnumerable<DTO.DTOEntity.ProductDTO>
+
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+    Layout = "~/Views/Shared/_PageLayout.cshtml";
 }
 
 <div class="top-products">
@@ -10,7 +11,7 @@
 		<div class="sap_tabs">
 			<div id="horizontalTab">
 				<ul class="resp-tabs-list">
-					<li class="resp-tab-item"><span>Top 20 new products</span></li>
+					<li class="resp-tab-item"><span>Search products</span></li>
 				</ul>
 				<div class="clearfix"> </div>
 				<div class="resp-tabs-container">
@@ -41,7 +42,7 @@
 								<h5>@item.Price</h5>
 							</div>
 						}
-						
+
 					</div>
 				</div>
 			</div>

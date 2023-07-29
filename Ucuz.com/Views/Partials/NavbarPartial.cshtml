@@ -28,7 +28,7 @@
 					<ul class="nav navbar-nav ">
 						<li class=" active"><a asp-controller="Default" asp-action="Index" class="hyper "><span>Home</span></a></li>
 						<li><a asp-controller="About" asp-action="Index" class="hyper"><span>About</span></a></li>
-						<li><a asp-controller="Contact" asp-action="Index" class="hyper"><span>Contact Us</span></a></li>
+						<li><a asp-controller="Contact" asp-action="Add" class="hyper"><span>Contact Us</span></a></li>
 						<li><a asp-controller="Login" asp-action="SignUp" class="hyper"><span>Register</span></a></li>
 						<li><a asp-controller="Login" asp-action="SignIn" class="hyper"><span>Login</span></a></li>
 					</ul>
@@ -50,8 +50,8 @@
 			});
 		</script>
 		<div class="col-md-4 search-agileinfo">
-			<form action="#" method="post">
-				<input type="search" name="Search" placeholder="Search for a Product..." required="">
+			<form asp-controller="Search" asp-action="Index" method="get">
+				<input type="search" name="productname" placeholder="Search for a Product..." required="">
 				<button type="submit" class="btn btn-default search" aria-label="Left Align">
 					<i class="fa fa-search" aria-hidden="true"> </i>
 				</button>
