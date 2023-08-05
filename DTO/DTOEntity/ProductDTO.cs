@@ -17,7 +17,7 @@ namespace DTO.DTOEntity
 		//Foreign Key
 
 		//ID int Category_Id
-		public int Category_Id { get; set; }
+		public int CategoryID { get; set; }
 
 		//references Category(ID);
 		public CategoryDTO CategoryDTO { get; set; }

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230703153015_WebMigrationClass")]
-    partial class WebMigrationClass
+    [Migration("20230805120344_WEbMihgggjjhhhkk")]
+    partial class WEbMihgggjjhhhkk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -144,9 +144,6 @@ namespace DataAccess.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
                     b.Property<int>("CategoryID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Category_Id")
                         .HasColumnType("int");
 
                     b.Property<string>("Image")

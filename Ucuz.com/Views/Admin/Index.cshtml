@@ -10,7 +10,7 @@
 <div class="agile-tables">
 	<div class="w3l-table-info">
 		<h3>Product table</h3>
-		<a href="#" class="btn btn-primary">New</a>
+		<a asp-controller="Admin" asp-action="Add" class="btn btn-primary">New</a>
 		<table id="table">
 			<thead>
 				<tr>
@@ -18,7 +18,6 @@
 					<th>Photo</th>
 					<th>Name</th>
 					<th>Price</th>
-					<th>Category</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</tr>
@@ -31,9 +30,8 @@
 						<td><img src="@item.Image"  style="width:70px; height:100px;"/></td>
 						<td>@item.Name</td>
 						<td>@item.Price</td>
-						<td>@item.Category_Id</td>
-						<td><a href="#" class="btn btn-success">Edit</a></td>
-						<td><a href="#" class="btn btn-danger">Delete</a></td>
+						<td><a asp-controller="Admin" asp-action="Update" asp-route-id="@item.ID" class="btn btn-success">Update</a></td>
+						<td><a asp-controller="Admin" asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger">Delete</a></td>
 					</tr>
 				}
 			</tbody>

@@ -4,7 +4,7 @@
 
 namespace DataAccess.Migrations
 {
-    public partial class WebMigrationClass : Migration
+    public partial class WEbMihgggjjhhhkk : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -127,7 +127,6 @@ namespace DataAccess.Migrations
                     Star = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Category_Id = table.Column<int>(type: "int", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

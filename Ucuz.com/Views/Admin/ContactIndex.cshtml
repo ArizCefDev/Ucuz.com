@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DTO.DTOEntity.ContactDTO>
+
+@{
+    ViewData["Title"] = "ContactIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="table-heading">
+	<h2>Contacts</h2>
+</div>
+<div class="agile-tables">
+	<div class="w3l-table-info">
+		<h3>Contact table</h3>
+		<table id="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Address</th>
+					<th>Phone</th>
+					<th>Gmail</th>
+					<th>Map</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>@item.ID</td>
+						<td>@item.Address</td>
+						<td>@item.Phone</td>
+						<td>@item.Gmail</td>
+						<td>@item.Map</td>
+						<td><a asp-controller="Admin" asp-action="ContactUpdate" asp-route-id="@item.ID" class="btn btn-success">Update</a></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+
+</div>
+

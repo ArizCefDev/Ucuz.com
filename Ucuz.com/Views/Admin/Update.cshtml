@@ -1,0 +1,46 @@
+﻿@model DTO.DTOEntity.ProductDTO
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="grids">
+    <div class="progressbar-heading grids-heading">
+        <h2>Input Forms</h2>
+    </div>
+    <div class="panel panel-widget forms-panel">
+        <div class="forms">
+            <div class="form-grids widget-shadow" data-example-id="basic-forms">
+                <div class="form-title">
+                    <h4>Update :</h4>
+                </div>
+                <div class="form-body">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Photo</label>
+                            <input type="text" asp-for="Image" class="form-control" id="exampleInputEmail1" placeholder="Photo">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Name</label>
+                            <input type="text" asp-for="Name" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Price</label>
+                            <input type="text" asp-for="Price" class="form-control" id="exampleInputPassword1" placeholder="Price">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Category id</label>
+                            <input type="text" asp-for="CategoryID" class="form-control" id="exampleInputPassword1" placeholder="Categoty id">
+                        </div>
+
+                        <button type="submit" class="btn btn-default w3ls-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

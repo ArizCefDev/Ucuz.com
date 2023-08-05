@@ -1,0 +1,14 @@
+﻿@model IEnumerable<DTO.DTOEntity.ContactDTO>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Address</li>
+        <li>@item.Phone</li>
+        <li><a href="mailto:@item.Gmail">@item.Gmail</a></li>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    }
+</ul>

@@ -2,20 +2,12 @@
 	<div class="container">
 		<div class="col-md-3 footer-grids fgd1">
 			<a asp-controller="Default" asp-action="Index"><img src="~/Tema/images/logo2.png" alt=" " /><h3>UCUZ.COM</h3></a>
-			<ul>
-				<li>1234k Avenue, 4th block,</li>
-				<li>New York City.</li>
-				<li><a href="mailto:info@example.com">info@example.com</a></li>
-				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-			</ul>
+			@await Component.InvokeAsync("AddressList")
 		</div>
 		<div class="col-md-3 footer-grids fgd2">
 			<h4>Information</h4>
 			<ul>
-				<li><a asp-controller="Contact" asp-action="Index">Contact Us</a></li>
+				<li><a asp-controller="Contact" asp-action="Add">Contact Us</a></li>
 				<li><a asp-controller="About" asp-action="Index">About</a></li>
 				<li><a href="#">Typography</a></li>
 				<li><a href="#">FAQ's</a></li>
@@ -24,10 +16,10 @@
 		<div class="col-md-3 footer-grids fgd3">
 			<h4>Shop</h4>
 			<ul>
-				<li><a href="jewellery.html">Men`s</a></li>
-				<li><a href="cosmetics.html">Women`s</a></li>
-				<li><a href="Shoes.html">Kid`s</a></li>
-				<li><a href="deos.html">Sport`s</a></li>
+				<li><a asp-controller="Search" asp-action="Index">Men`s</a></li>
+				<li><a asp-controller="Search" asp-action="Index">Women`s</a></li>
+				<li><a asp-controller="Search" asp-action="Index">Kid`s</a></li>
+				<li><a asp-controller="Search" asp-action="Index">Sport`s</a></li>
 			</ul>
 		</div>
 		<div class="col-md-3 footer-grids fgd4">

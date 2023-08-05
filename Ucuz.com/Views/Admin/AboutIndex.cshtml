@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DTO.DTOEntity.AboutDTO>
+
+@{
+    ViewData["Title"] = "AboutIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="table-heading">
+	<h2>Abouts</h2>
+</div>
+<div class="agile-tables">
+	<div class="w3l-table-info">
+		<h3>About table</h3>
+		<table id="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Photo1</th>
+					<th>Photo2</th>
+					<th>Photo3</th>
+					<th>Photo4</th>
+					<th>Title</th>
+					<th>Description</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>@item.ID</td>
+						<td><img src="@item.Image1" style="width:100px; height:70px;" /></td>
+						<td><img src="@item.Image2" style="width:100px; height:70px;" /></td>
+						<td><img src="@item.Image3" style="width:100px; height:70px;" /></td>
+						<td><img src="@item.Image4" style="width:100px; height:70px;" /></td>
+						<td>@item.Title</td>
+						<td>@item.Description</td>
+						<td><a asp-controller="Admin" asp-action="AboutUpdate" asp-route-id="@item.ID" class="btn btn-success">Update</a></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+

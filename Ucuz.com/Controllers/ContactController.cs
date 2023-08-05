@@ -33,5 +33,6 @@ namespace Ucuz.com.Controllers
         {
             return View();  
         }
+
     }
 }

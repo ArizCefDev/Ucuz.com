@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DTO.DTOEntity.MessageDTO>
+@{
+    ViewData["Title"] = "MessageIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="table-heading">
+	<h2>Messages</h2>
+</div>
+<div class="agile-tables">
+	<div class="w3l-table-info">
+		<h3>Message table</h3>
+		<table id="table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Gmail</th>
+					<th>Text</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>@item.ID</td>
+						<td>@item.Name</td>
+						<td>@item.Gmail</td>
+						<td>@item.Text</td>
+						<td><a asp-controller="Admin" asp-action="MessageDelete" asp-route-id="@item.ID" class="btn btn-danger">Delete</a></td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+
